@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --moble-width: 375px;
+  --desktop-width: 1440px;
+  --neon-green: #c4f82a;
+  --white: #ffffff;
+  --grey: #333333;
+  --dark-gray: #1f1f1f;
+  --black: #141414;
+  --p-font-size: 14px;
+  --heading-font-size: 24px;
+  --bold: 700;
+  --semi-bold: 600;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* Utility Classes */
+
+.body-bold {
+  font-weight: var(--bold);
+}
+
+.heading {
+  font-size: var(--heading-font-size);
+  font-weight: var(--semi-bold);
+}
+
+.link {
+  background-color: var(--grey);
+  height: 45px;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link:hover {
+  background-color: var(--neon-green);
+  color: var(--black);
+  cursor: pointer;
+}
+/* Page Styles */
+
+body {
+  line-height: 150%;
+  font-size: var(--p-font-size);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  font-family: "Inter", sans-serif;
+  color: var(--white);
+}
+
+#card {
+  border-radius: 12px;
+  padding: 40px;
+  background-color: var(--dark-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: absolute;
+  width: 384px;
+  height: 611px;
+  left: calc(50% - 384px / 2);
+  top: calc(50% - 611px / 2 - 0.5px);
+}
+
+#profile-pic {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#name-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+#title-div {
+  height: 36px;
+}
+#description-div {
+  height: 21px;
+}
+#description {
+  color: var(--neon-green);
+}
+#bio-div {
+  height: 21px;
+}
+#links-div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 304px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 376px) {
+  #card {
+    padding: 24px;
+    gap: 24px;
+
+    position: absolute;
+    width: 327px;
+    height: 579px;
+    left: calc(50% - 327px / 2);
+    top: calc(50% - 579px / 2 - 0.5px);
+  }
+}
